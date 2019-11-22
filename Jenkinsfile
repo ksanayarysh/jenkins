@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'maslovu/api-tests'
+        }
+    }
 
     stages {
         stage('Build') {
